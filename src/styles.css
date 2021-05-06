@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  font: 600 12px Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #fafafa;
+}
+#root {
+  display: flex;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  margin-left: 100px;
+}
+aside {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  display: grid;
+  grid-gap: 10px;
+  grid-auto-flow: row;
+  grid-auto-rows: min-content;
+  /* margin-right: 30px; */
+}
+aside > div {
+  border: 1px dashed #999;
+  cursor: grab;
+  padding: 10px;
+  text-align: center;
+  width: 80px;
+}
+
+em {
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #d4d4d4;
+  font-size: 24px;
+  pointer-events: none;
+}
+header {
+  display: flex;
+  align-items: center;
+  padding: 0 10px 0;
+}
+header > h2 {
+  flex-grow: 1;
+  margin: 0;
+}
+header > button {
+  padding: 5px;
+  background: 0;
+  border: 0;
+  font-weight: 400;
+}
+.delete-button {
+  cursor: pointer;
+}
+.draggable-handle {
+  cursor: move;
+}
+
+.react-grid-layout {
+  flex-grow: 1;
+  /* min-height: 400px; */
+}
+.react-grid-item:not(.react-grid-placeholder) {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  font-size: 20px;
+}
+.react-grid-item.react-grid-placeholder {
+  background: #fff !important;
+  border: 3px dashed #999;
+}
+.react-grid-item.resizing {
+  opacity: 0.7;
+  z-index: 3;
+}
